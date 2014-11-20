@@ -1,0 +1,118 @@
+<?php
+// Modif JF 2014/11/20
+global $CFG;
+?>
+
+<script type="text/javascript" src="<?php echo $CFG->wwwroot.'/question/type/ipatranscription/js/jquery.js'; ?>"></script>
+<link href="<?php echo $CFG->wwwroot.'/question/type/ipatranscription/css/IPA_buttons.css'; ?>" type="text/css" rel="stylesheet" />
+<div class="assets_holder"></div>
+<script type="text/javascript">
+$(function() {
+if ($('.assets').length === 0) {
+    $('div.assets_holder').html('\x3Cdiv class="assets">\x3Cscript type="text/javascript" src="<?php echo $CFG->wwwroot.'/question/type/ipatranscription/js/IPA_buttons.js'; ?>">\x3C/script>\x3C/div>');
+}
+else {
+	return false;
+}
+});
+</script>
+<div class="ipa-buttons hover">
+<span id="lang-switch" title="Click here to change variety"><a class="rp"><img alt="RP" src="<?php echo $CFG->wwwroot.'/question/type/ipatranscription/flag-uk.png'; ?>"/></a><a class="genam"><img alt="GenAm" src="<?php echo $CFG->wwwroot.'/question/type/ipatranscription/flag-usa.png'; ?>"/></a></span>
+<span class="group rp">
+<button type="button">ɪ</button>
+<button type="button">e</button>
+<button type="button">æ</button>
+<button type="button">ʌ</button>
+<button type="button">ɒ</button>
+<button type="button">ʊ</button>
+<button type="button">ə</button>
+<button type="button">i</button>
+<button type="button">u</button>
+<button type="button">ɔ</button>
+<button type="button">ɜ</button>
+<button type="button">ɑ</button>
+<button type="button">a</button>
+<button type="button">ː</button>
+    </span>
+<span class="group genam">
+<button type="button">ɪ</button>
+<button type="button">e</button>
+<button type="button">æ</button>
+<button type="button">ʌ</button>
+<button type="button">ɒ</button>
+<button type="button">o</button>
+<button type="button">ʊ</button>
+<button type="button">ɚ</button>
+<button type="button">ə</button>
+<button type="button">i</button>
+<button type="button">u</button>
+<button type="button">ɔ</button>
+<button type="button">ɝ</button>
+<button type="button">ɑ</button>
+<button type="button">a</button>
+<button type="button">ː</button>
+    </span>
+    <span class="group">
+<button type="button">p</button>
+<button type="button">b</button>
+<button type="button">t</button>
+<button type="button">d</button>
+<button type="button">k</button>
+<button type="button">ɡ</button>
+    </span>
+    <span class="group">
+<button type="button">f</button>
+<button type="button">v</button>
+<button type="button">θ</button>
+<button type="button">ð</button>
+<button type="button">s</button>
+<button type="button">z</button>
+<button type="button">ʃ</button>
+<button type="button">ʒ</button>
+<button type="button">h</button>
+    </span>
+    <span class="group">
+<button type="button">m</button>
+<button type="button">n</button>
+<button type="button">ŋ</button>
+    </span>
+    <span class="group">
+<button type="button">ɹ</button>
+<button type="button">l</button>
+<button type="button">j</button>
+<button type="button">w</button>
+    </span>
+    <span class="group">
+<button type="button">ᵊ</button>
+<button type="button">ˈ</button>
+<button type="button">ˌ</button>
+<button type="button">/</button>
+    </span>
+</div>
+<div class="qtext">
+  <?php echo $questiontext; ?>
+</div>
+
+<?php if ($image) { ?>
+  <img class="qimage" src="<?php echo $image; ?>" alt="" />
+<?php } ?>
+
+<div class="ablock clearfix">
+  <div class="prompt">
+    <?php echo get_string("answer", "quiz").': '; ?>
+  </div>
+
+  <div class="answer">
+    <input type="text" class="<?php echo $class; ?>" <?php echo "$readonly $inputname $value"; ?> size="80"/>
+    <?php echo $feedbackimg; ?>
+  </div>
+  <?php if ($feedback) { ?>
+    <div class="feedback">
+      <?php echo $feedback ?>
+    </div>
+  <?php } ?>
+  <?php $this->print_question_submit_buttons($question, $state, $cmoptions, $options); ?>
+</div>
+<script type="text/javascript">
+$(".ipa-buttons").slice(1).remove();
+</script>

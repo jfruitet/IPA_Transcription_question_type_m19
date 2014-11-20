@@ -1,0 +1,4 @@
+ipatranscription question type for Moodle 1.9
+
+Bug correction JF 2014/11/20
+Replacement of "/moodle" by "$CFG->wwwroot" in display.html and  edit_transcription_form.php

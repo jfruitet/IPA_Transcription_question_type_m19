@@ -1,0 +1,7 @@
+To install this plugin:
+
+1. Extract the files in the following directory of your moodle instance:
+
+/question/type/
+
+2. Go to the notifications panel to generate relevant sql tables.

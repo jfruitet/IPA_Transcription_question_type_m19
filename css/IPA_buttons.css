@@ -1,0 +1,101 @@
+button {
+	position: relative;
+}
+
+hr {
+	color: #CCC;
+	background-color: #CCC;
+	border: 1px solid #CCC;
+}
+
+input[id^="id_answer_"] {
+    font-family: "Charis SIL", "Doulos SIL", "Times New Roman"; 
+    font-size: 1.5em;
+    line-height: 2.5em;
+    width: 100%;
+}
+
+.answer input[type="text"] {
+    font-family: "Charis SIL", "Doulos SIL", "Times New Roman"; 
+    font-size: 1.5em;
+    line-height: 2.5em;
+    width: 100%;
+}
+
+.ipa-buttons {
+    border: 1px solid;
+    padding: 5px;
+    text-align: center;
+    background: none repeat scroll 0 0 #F3F3F3;
+    border-color: #CCCCCC;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.15);
+    border-radius: 2px;
+}
+
+.hover {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    width: 700px;
+    margin-left: -350px;
+}
+
+.group {
+    display: inline;
+    padding: 5px 5px;
+}
+
+.ipa-buttons .group {
+    display: inline-block;
+    padding: 5px 5px;
+}
+
+.ipa-buttons button {
+    font-family: "Charis SIL", "Doulos SIL", "Times New Roman"; 
+    font-size: 20px;
+    background: white;
+    border: 1px solid;
+    background: none repeat scroll 0 0 #F3F3F3;
+    border-color: #CCCCCC;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.15);
+    border-radius: 1px;
+    width: 1.5em;
+    height: 1.5em;
+    margin: 1px;
+    cursor: pointer;
+    line-height: 1em;
+}
+
+.group button {
+    font-family: "Charis SIL", "Doulos SIL", "Times New Roman"; 
+    font-size: 20px;
+    background: white;
+    border: 1px solid;
+    background: none repeat scroll 0 0 #F3F3F3;
+    border-color: #CCCCCC;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.15);
+    border-radius: 1px;
+    width: 1.5em;
+    height: 1.5em;
+    margin: 1px;
+    cursor: pointer;
+    line-height: 1em;
+    display: inline-block;
+}
+
+.ipa-buttons button:hover {
+    background-color: #F2F0D5;
+}
+
+.group button:hover {
+    background-color: #F2F0D5;
+}
+
+​​.float-left {
+    float: left;
+}
+
+#lang-switch {
+	float: right;
+	cursor: pointer;
+}
